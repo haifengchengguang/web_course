@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>商品上传界面</title>
+    <link rel="stylesheet" type="text/css" href="/upload/uploadGoods.css"/>
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+    <style>
+        body {
+            height: 100%;
+            background: #16a085;
+            overflow: hidden;
+        }
+
+        canvas {
+            z-index: -1;
+            position: absolute;
+        }
+    </style>
+    <script src="/upload/jquery.js"></script>
+    <script src="/upload/verificationNumbers.js"></script>
+    <script src="/upload/Particleground.js"></script>
+    <script>
+        $(document).ready(function () {
+            //粒子背景特效
+            $('body').particleground({
+                dotColor: '#5cbdaa',
+                lineColor: '#5cbdaa'
+            });
+            $(".submit_btn").click(function () {
+                location.href = "javascrpt:;";
+            });
+        });
+    </script>
+</head>
+<body>
+<dl class="admin_login">
+
+    <form action="/upload" method="post" autocomplete="off">
+        <dt>
+            <strong style="font-size: 30px">商品上传</strong>
+            <em>COMMODITY UPLOAD</em>
+            <em>商品类型：1-书籍、2-电子产品、3-服装、4-其他</em>
+        </dt>
+        <dd class="name_icon">
+            <input type="text" placeholder="商品名称" name="commodityName" class="login_txtbx"/>
+        </dd>
+        <dd class="kind_icon">
+            <input type="text" placeholder="商品类型" name="commodityKind" class="login_txtbx"/>
+        </dd>
+        <dd class="price_icon">
+            <input type="text" placeholder="商品单价" name="commodityPrice" class="login_txtbx"/>
+        </dd>
+        <dd class="link_icon">
+            <input type="text" placeholder="商品照片" name="commodityPhoto" class="login_txtbx"/>
+        </dd>
+        <dd class="detail_icon">
+            <input type="text" placeholder="商品描述" name="detail" class="login_txtbx"/>
+        </dd>
+        <dd hidden>
+            <input type="text" name="account" value="{{account}}"/>
+        </dd>
+        <dd>
+            <input type="submit" value="立即上传" class="submit_btn"/>
+
+        </dd>
+        <dd>
+            <a href="/index?account={{account}}">返回首页</a>
+        </dd>
+
+    </form>
+</dl>
+</body>
+</html>

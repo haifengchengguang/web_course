@@ -1,0 +1,72 @@
+
+#bg{
+    background-size:100%,100%;
+}
+h1{
+    font-size:50px;
+}
+input{
+    margin-left: 100px;
+    border-color: beige;
+    border-radius: 1em;
+    width:300px;
+    height:45px;
+    font-size: 30px;
+    margin-top:5px;
+    outline:none;
+
+}
+fieldset{
+    border-radius: 1em;
+    border-color: #1f1f20;
+    width:650px;
+}
+.bu{
+    width:100px;
+    height:50px;
+    margin-left:150px;
+    background-color: ghostwhite;
+    color: #ff0000;
+    font-size:30px;
+}
+.bu:hover{
+    color:ghostwhite;
+    background-color: red;
+
+}
+hgroup {
+    margin-top:10%;
+    text-align:center;
+    color:#1f1f20;
+}
+#login{
+    width:400px;
+    height:280px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    margin-left:-200px;
+    margin-top:-140px;
+    border:1px;
+    align:center;
+
+
+}
+#form{
+    width:300px;
+    height:160px;
+    position:relative;
+    left:50%;
+    top:50%;
+    margin-left:-350px;
+    margin-top:-80px;
+
+}
+#frame{
+    font-size: 30px;
+    color: blue;
+}
+label{
+    font-size:30px;
+    margin-left:50px;
+}

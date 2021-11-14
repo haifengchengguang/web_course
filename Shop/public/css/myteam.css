@@ -1,0 +1,190 @@
+fieldset{
+    border-radius: 1em;
+    border-color: #0000ff;
+    width:1000px;
+}
+#search{
+
+    text-align: center;
+
+}
+#searchi{
+    list-style:none;
+
+}
+#inputwidth{
+    width: 600px;
+    height: 35px;
+    /*border-color: #2cbf69;*/
+    border-color: #aaaaad;
+    border-radius: 3px;
+}
+#bottom1{
+
+    color: white;
+    border:none;
+    width: 100px;
+    height: 37px;
+    background-color: #2c56bf;
+    border-radius: 1px;
+
+}
+.bottom5{
+    padding-left: 10px;
+    color: white;
+    border:none;
+    width: 100px;
+    height: 37px;
+    background-color: #2cbf4c;
+    border-radius:5px
+}
+.history1{
+    padding-top: 20px;
+    color: #fcfdff;
+    font-size: 35px;
+    background-color: #ac2312;
+    height: 60px;
+
+}
+#top{
+    height:50px;
+    background-color:#DDDDDD;
+
+}
+.list{
+    left:200px;
+    margin: 0px;
+    padding:0px;
+}
+.list li {
+    position:relative;
+    margin-left:70px ;
+    height:50px;
+    width:115px;
+    list-style:none;
+    float:left;
+    display:inline;
+    z-index:1000;
+}
+.list li a{
+    text-align:center;
+
+    color: black ;
+    width:115px;
+    margin:0px;
+    padding:0px 0px 0px 0px;
+    text-decoration: none;
+    display:block;
+    line-height:50px;
+}
+.list li a:hover{
+    text-decoration: underline;
+}
+.list#user a{
+    text-align:center;
+    color: black ;
+    width:150px;
+    margin:0px;
+    padding:0px 0px 0px 0px;
+    text-decoration: none;
+    display:block;
+    line-height:50px;
+}
+.option{
+    position:relative;
+    left: 400px;
+}
+#user ul{
+    visibility: hidden;
+}
+#user ul li a{
+    width:100px;
+    height:50px;
+    color: black ;
+    background-color:#DDDDDD;
+}
+#user:hover ul {
+    visibility: visible;
+    position:relative;
+    left:-110px;
+}
+
+#user2 ul{
+    visibility: hidden;
+}
+#user2 ul li a{
+    width:100px;
+    height:50px;
+    color: black ;
+    background-color:#DDDDDD;
+}
+#user2:hover ul {
+    visibility: visible;
+    position:relative;
+    left:-110px;
+}
+.list#user a:hover{
+    text-decoration: underline;
+}
+.list#user2 a:hover{
+    text-decoration: underline;
+}
+#centermanage{
+    padding-left: 30%;
+}
+#communicate{
+    padding-left: 300px;
+}
+.list1{
+    left:200px;
+    margin: 0px;
+    padding:0px;
+}
+.list1 li {
+    position:relative;
+    margin-left:70px ;
+    height:50px;
+    width:115px;
+    list-style:none;
+
+    display:inline;
+    z-index:1000;
+}
+.list1 li a{
+    text-align:center;
+
+    color: black ;
+    width:115px;
+    margin:0px;
+    padding:0px 0px 0px 0px;
+    text-decoration: none;
+    display:block;
+    line-height:50px;
+}
+.list1 li a:hover{
+    text-decoration: underline;
+}
+.list1#user a{
+    text-align:center;
+    color: black ;
+    width:150px;
+    margin:0px;
+    padding:0px 0px 0px 0px;
+    text-decoration: none;
+    display:block;
+    line-height:50px;
+}
+
+.list1#user2 a{
+    text-align:center;
+    color: black ;
+    width:150px;
+    margin:0px;
+    padding:0px 0px 0px 0px;
+    text-decoration: none;
+    display:block;
+    line-height:50px;
+}
+.edgecolor{
+    border-color: blue;
+}

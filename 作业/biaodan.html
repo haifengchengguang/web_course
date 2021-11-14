@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+    <style type="text/css">
+        fieldset{width:620px;height:240px;border:2px double rgba(84, 106, 149, 0.98);padding-left:130px;}
+    </style>
+
+</head>
+<body>
+<article>
+<form name="form1" method="post" action="" enctype="text/plain">
+    <fieldset>
+        <legend align="center">基本信息</legend>
+     注册姓名:
+    <input type="text" required/>
+    工作单位:
+    <input type="text" required/><br/>
+    电子邮件:
+    <input type="email" required/>
+    手机号码:
+    <input type="tel" maxlength="13" minlength="13"/><br/>
+    报告题目:
+    <input type="text" required/>
+    报到时间:
+    <input type="date" required/><br/><br/>
+    <input  type="submit" value="注册"/>
+    <input  type="reset" value="重置"/>
+        </fieldset>
+
+</form>
+<footer>
+    <p>Posted by: sdu</p>
+</footer>
+</article>
+</body>
+</html>

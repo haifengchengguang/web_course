@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+    <meta charset="utf-8">
+    <title>书籍-校园二手交易平台</title>
+    <link href="/css/detail.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/myteam.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+</head>
+<body>
+<div id="top">
+    <ul class="list">
+        <li id="user">
+            <a href="/index?account={{account}}">用户</a>
+            <ul>
+                <li><a href="/password?account={{account}}">修改密码</a></li>
+                <li><a href="/record?account={{account}}">购买记录</a></li>
+                <li><a href="/like?account={{ account }}">收藏夹</a></li>
+                <li><a href="/login">退出</a></li>
+            </ul>
+        </li>
+        <li id="user2">
+            <a href="/index?account={{ account }}">校园助手</a>
+            <ul>
+                <li><a href="/bus?account={{account}}">校车查询</a></li>
+                <li><a href="/course?account={{account}}">作息时间表</a></li>
+                <li><a href="/room1?account={{ account }}">上课安排</a></li>
+                <li><a href="/calendar?account={{ account }}">校历</a></li>
+            </ul>
+        </li>
+        <li><a class="option" href="/upload?account={{ account }}">上传</a></li>
+        <li><a class="option" href="/manage?account={{ account }}">商品管理</a></li>
+    </ul>
+    <br>
+</div>
+<header id="header">
+
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index?account={{account}}"><img src="images/logo.png" alt="logo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="centermanage"><!--navbar-right-->
+                <ul class="nav navbar-nav">
+                    <li><a href="/index?account={{account}}">首页</a></li>
+                    <li><a href="/book?account={{account}}">书籍</a></li>
+                    <li><a href="/electronic?account={{account}}">电子产品</a></li>
+                    <li><a href="/clothes?account={{account}}">服装</a></li>
+                    <li><a href="/others?account={{account}}">其他商品</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<br>
+<section id="about-us">
+    <div id="text">
+        <img id="img111" src="{{ commodityPhoto }}">
+        <p class="detail">商品名：{{ commodityName }}</p>
+        <p class="detail">商品单价：{{ commodityPrice }}</p>
+        <p class="detail">寄售人姓名: {{ studentName }}</p>
+        <p class="detail">手机号: {{ tel }}</p>
+        <p class="detail">商品介绍:{{ detail }}</p>
+    </div>
+    </div >
+    <div id="hiddenform">
+        <form id="buyform" autocomplete="off">
+            <fieldset id="sub">
+                <input type="hidden" name="seller" value="{{name}}"/><br/>
+                <input type="hidden" name="buy" value="{{user}}"/><br/>
+                <input type="hidden" name="id" value="{{id}}"/><br/>
+                <input type="button" class="bu" value="收藏"
+                       onclick="javascript:window.location.href='/star?account={{account}}&id={{id}}'"/>
+                <input type="button" class="bu" value="购买"
+                       onclick="javascript:window.location.href='/buy?account={{account}}&id={{id}}'"/>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id="tell">
+        <form method="post" action="/comment" id="commentform" autocomplete="off">
+            <input type="hidden" name="account" value="{{account}}"/><br/>
+            <input type="hidden" name="id" value="{{id}}"/><br/>
+            <textarea id="commenttext" type="text" name="talk" style="color: #aaa">请输入评论内容</textarea>
+            <input type="submit" id="comment" value="发表"/>
+        </form>
+    </div>
+    <script>
+        var s = document.getElementById("commenttext");
+        s.onfocus = function () {
+            if (this.value == this.defaultValue)
+                this.value = ''
+        };
+        s.onblur = function () {
+            if (/^\s*$/.test(this.value)) {
+                this.value = this.defaultValue;
+                this.style.color = '#aaa'
+            }
+        }
+        s.onkeydown = function () {
+            this.style.color = '#000000'
+        }
+    </script>
+    <br/><br/><br/><br/>
+    <div id="peoplecomment">
+        <table border="1" class="c" style="background: url(/images/commentbg.jpg)">
+            {{ each comments }}
+            <tr height="50">
+                <td>{{$value.studentName}}：<br/>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp{{$value.talk}}</td>
+            </tr>
+            {{ /each }}
+        </table>
+    </div>
+</section>
+</body>
+</html>

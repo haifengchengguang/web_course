@@ -1,0 +1,30 @@
+@charset "UTF-8";
+*{
+	padding:0;
+	margin:0;
+}
+
+a{
+	color:black;
+}
+a:hover{
+	color:green;
+}
+.login{
+	color:black;
+	font-size:30px;
+	color:red;
+}
+.top{
+	position:relative;
+	top:200px;
+	text-align:center;
+	height:100px;
+}
+.bottom{
+	position:relative;
+	top:300px;
+	text-align:center;
+	height:100px;
+}
+

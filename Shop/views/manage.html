@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+<head>
+    <meta charset="utf-8">
+    <title>校园二手交易平台</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/myteam.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+</head>
+<body>
+<div id="top">
+    <ul class="list">
+        <li id="user">
+            <a href="/index?account={{account}}">用户</a>
+            <ul>
+                <li><a href="/password?account={{account}}">修改密码</a></li>
+                <li><a href="/record?account={{account}}">购买记录</a></li>
+                <li><a href="/like?account={{ account }}">收藏夹</a></li>
+                <li><a href="/login">退出</a></li>
+            </ul>
+        </li>
+        <li id="user2">
+            <a href="/index?account={{ account }}">校园助手</a>
+            <ul>
+                <li><a href="/bus?account={{account}}">校车查询</a></li>
+                <li><a href="/course?account={{account}}">作息时间表</a></li>
+                <li><a href="/room1?account={{ account }}">上课安排</a></li>
+                <li><a href="/calendar?account={{ account }}">校历</a></li>
+            </ul>
+        </li>
+        <li><a class="option" href="/upload?account={{ account }}">上传</a></li>
+        <li><a class="option" href="/manage?account={{ account }}">商品管理</a></li>
+    </ul>
+    <br>
+</div>
+<header id="header">
+
+    <nav class="navbar navbar-inverse" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/index?account={{account}}"><img src="/images/logo.png" alt="logo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="centermanage"><!--navbar-right-->
+                <ul class="nav navbar-nav">
+                    <li><a href="/index?account={{account}}">首页</a></li>
+                    <li><a href="/book?account={{account}}">书籍</a></li>
+                    <li><a href="/electronic?account={{account}}">电子产品</a></li>
+                    <li><a href="/clothes?account={{account}}">服装</a></li>
+                    <li><a href="/others?account={{account}}">其他商品</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<div id="search">
+    <p class="history1">管理商品</p>
+</div>
+<section id="about-us">
+    <div class="container">
+        <div class="row">
+            {{ each commodities }}
+            <div class="col-md-3 img-portfolio" style="margin-bottom: 40px">
+                <a href="/commodity?account={{account}}&id={{ $value.id }}">
+                    <img class="img-responsive img-hover" src="{{ $value.commodityPhoto }}" alt="">
+                </a>
+                <h3>
+                    <a href="/commodity?account={{account}}&id={{ $value.id }}">{{ $value.commodityName }}</a>
+                </h3>
+                <p>￥{{ $value.commodityPrice }}</p>
+                <input type="button" class="bottom5" value="删除"
+                       onclick="javascript:window.location.href='/delete?account={{ account }}&id={{ $value.id }}'"/>
+            </div >
+            {{ /each }}
+        </div>
+    </div>
+</section>
+
+
+<section id="bottom">
+    <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                    <h3>二手书</h3>
+                    <ul>
+                        <li>吉米多维奇</li>
+                        <li>数学分析（复旦）</li>
+                        <li>数学分析（中科大）</li>
+                        <li>数学分析（卓里奇）</li>
+                        <li>数学分析（郭大钧）</li>
+                        <li>线性代数及其应用（机械工业）</li>
+                        <li>全新版大学英语综合教程</li>
+
+
+                    </ul>
+                </div>
+            </div><!--/.col-md-3-->
+
+            <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                    <h3>电子产品</h3>
+                    <ul>
+                        <li>iphone</li>
+                        <li>ipad</li>
+                        <li>mac</li>
+                        <li>surface</li>
+                        <li>小新pro13</li>
+                        <li>xps</li>
+                        <li>thinkpad</li>
+                    </ul>
+                </div>
+            </div><!--/.col-md-3-->
+
+            <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                    <h3>服装</h3>
+                    <ul>
+                        <li>西服</li>
+                        <li>礼服</li>
+                    </ul>
+                </div>
+            </div><!--/.col-md-3-->
+
+            <div class="col-md-3 col-sm-6">
+                <div class="widget">
+                    <h3>其他商品</h3>
+                    <ul>
+                        <li>山大纪念品</li>
+                        <li>笔记本</li>
+                        <li>笔</li>
+                    </ul>
+                </div>
+            </div><!--/.col-md-3-->
+        </div>
+    </div>
+</section><!--/#bottom-->
+
+<footer id="footer" class="midnight-blue">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                &copy; 20 <a target="_blank" href="#" title="#">#6-230-web小组</a>
+            </div>
+            <div class="col-sm-6">
+                <ul class="pull-right">
+                    <li><a href="/book?account={{account}}">书籍</a></li>
+                    <li><a href="/electronic?account={{account}}">电子产品</a></li>
+                    <li><a href="/clothes?account={{account}}">服装</a></li>
+                    <li><a href="/others?account={{account}}">其他商品</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--/footer-->
+
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+    $('.carousel').carousel()
+</script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.prettyPhoto.js"></script>
+<script src="js/jquery.isotope.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/wow.min.js"></script>
+</body>
+</html>

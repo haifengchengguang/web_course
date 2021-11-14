@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="GB2312">
+    <title>导航</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        ul,a{
+            font-size: 30px;
+            list-style: none;
+            text-decoration: none;
+            background-color: #800000;
+            color: #FFFFFF;
+            width: 200px;
+            text-align: center;
+            border: 0px solid red;
+            border-radius: 10px;
+            margin-top: 2px;
+        }
+        a{
+            display: block;
+        }
+
+        .plat{
+            display: none;
+        }
+        .nav{
+             float: left;
+             margin-left: 1px;
+         }
+        .nav:hover .plat{
+            display: block;
+            clear: both;
+        }
+        .plat li:hover>a{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<ul class="nav">
+    <a href="#">搜索引擎</a>
+    <ul class="plat">
+        <li><a href="https://www.baidu.com"title="百度">百度</a></li>
+        <li><a href="https://cn.bing.com"title="必应">必应</a></li>
+        <li><a href="https://www.sogou.com"title="搜狗">搜狗</a></li>
+    </ul>
+</ul>
+<ul class="nav">
+    <a href="#">程序员</a>
+    <ul class="plat">
+        <li><a href="https://www.github.com"title="同性交友网站">github</a></li>
+        <li><a href="https://www.v2ex.com"title="又是一个同性交友网站">v2ex</a></li>
+        <li><a href="https://www.cnblogs.com"title="程序员论坛">博客园</a></li>
+    </ul>
+</ul>
+<ul class="nav">
+    <a href="#">学习网站</a>
+    <ul class="plat">
+        <li><a href="https://www.icourse163.org/"title="好的大学没有围墙">mooc</a></li>
+        <li><a href="https://www.bilibili.com"title="b站">bilibili</a></li>
+        <li><a href="https://leetcode.com"title="leetcode">leetcode</a></li>
+    </ul>
+</ul>
+</body>
+</html>
+
+
+

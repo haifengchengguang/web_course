@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>空闲教室</title>
+    <!--        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">-->
+    <link href="/css/myteam.css" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/images/ico/favicon.ico">
+
+    <style type="text/css">
+        .layui-form-item {
+            text-align: center;
+            background-color: #b82d2d;
+            height: 90px;
+        }
+
+        .layui-form-item .layui-input-inline {
+            width: 180px;
+        }
+
+        .layui-form-pane .layui-form-label {
+            /* width:130px;
+            font-size: 20px; */
+        }
+
+        .layui-input {
+            /* font-size: 20px; */
+        }
+
+        .layui-form select {
+            /* display: block; */
+        }
+
+        .nomsg {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .layui-form-radioed {
+            background-color: rgba(3, 169, 244, 0.62);
+            color: #fff;
+        }
+
+        #holiday {
+            min-height: 800px;
+        }
+
+        #day {
+            height: 50px;
+            background-color: #DDDDDD;
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+<div id="top">
+    <ul class="list">
+        <li id="user">
+            <a href="/index?account={{account}}">用户</a>
+            <ul>
+                <li><a href="/password?account={{account}}">修改密码</a></li>
+                <li><a href="/record?account={{account}}">购买记录</a></li>
+                <li><a href="/like?account={{ account }}">收藏夹</a></li>
+                <li><a href="/login">退出</a></li>
+            </ul>
+        </li>
+        <li id="user2">
+            <a href="/index?account={{ account }}">校园助手</a>
+            <ul>
+                <li><a href="/bus?account={{account}}">校车查询</a></li>
+                <li><a href="/course?account={{account}}">作息时间表</a></li>
+                <li><a href="/room1?account={{ account }}">上课安排</a></li>
+                <li><a href="/calendar?account={{ account }}">校历</a></li>
+            </ul>
+        </li>
+        <li><a class="option" href="/upload?account={{ account }}">上传</a></li>
+        <li><a class="option" href="/manage?account={{ account }}">商品管理</a></li>
+    </ul>
+    <br>
+</div>
+
+<div class="layui-form-item">
+    <br>
+    <span style="font-size: 30px;color: #eeeef3;font-weight: bold;">空闲教室查询</span>
+</div>
+<br>
+<div id="day">
+    <ul class="list">
+        <li><a href="/room1?account={{account}}">周一</a></li>
+        <li><a href="/room2?account={{account}}">周二</a></li>
+        <li><a href="/room3?account={{account}}">周三</a></li>
+        <li><a href="/room4?account={{account}}">周四</a></li>
+        <li><a href="/room5?account={{account}}">周五</a></li>
+    </ul>
+    <br>
+</div>
+
+
+<div id="data" style="width: 90%;margin:auto;" class="tb tb-b">
+    <table id="tableData" style="width: 100%;">
+        <thead style="background-color: #EEEEEE">
+        <tr>
+            <th style="width: 20%;font-size: 20px;">教室</th>
+            <th style="width: 16%;font-size: 20px;">第一大节</th>
+            <th style="width: 16%;font-size: 20px;">第二大节</th>
+            <th style="width: 16%;font-size: 20px;">第三大节</th>
+            <th style="width: 16%;font-size: 20px;">第四大节</th>
+            <th style="width: 16%;font-size: 20px;">第五大节</th>
+        </tr>
+        <tr>
+            <th style="width: 20%;font-size: 20px;">一区107</th>
+            <th style="width: 16%;font-size: 20px;">有课</th>
+            <th style="width: 16%;font-size: 20px;"></th>
+            <th style="width: 16%;font-size: 20px;"></th>
+            <th style="width: 16%;font-size: 20px;">有课</th>
+            <th style="width: 16%;font-size: 20px;"></th>
+        </tr>
+        <tr>
+            <th style="width: 20%;font-size: 20px;">一区108</th>
+            <th style="width: 16%;font-size: 20px;">有课</th>
+            <th style="width: 16%;font-size: 20px;"></th>
+            <th style="width: 16%;font-size: 20px;">有课</th>
+            <th style="width: 16%;font-size: 20px;">有课</th>
+            <th style="width: 16%;font-size: 20px;"></th>
+        </tr>
+        <tr>
+            <th style="width: 20%;font-size: 20px;">一区109</th>
+            <th style="width: 16%;font-size: 20px;">有课</th>
+            <th style="width: 16%;font-size: 20px;"></th>
+            <th style="width: 16%;font-size: 20px;"></th>
+            <th style="width: 16%;font-size: 20px;">有课</th>
+            <th style="width: 16%;font-size: 20px;">有课</th>
+        </tr>
+
+        </thead>
+        <tbody id="showSearchData"></tbody>
+    </table>
+
+</div>
+
+</div>
+
+
+</body>
+</html>

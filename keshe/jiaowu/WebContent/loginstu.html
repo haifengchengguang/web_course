@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html meta="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生登录</title>
+	<link rel="stylesheet" href="css\login.css">
+</head>
+<body>
+<div class="wrapper">
+    <!--背景图片-->
+    <div id="web_bg" style="background-image: url(photo/0001.jpg);"></div>
+    <!--其他代码 ... -->
+    </div>
+<article>
+    <header>
+        <hgroup>
+            <h1>本科生教务系统</h1>
+        </hgroup>
+
+    </header>
+        <div id="login">
+            <div id="form">
+            <form action="LoginStuServlet" method="post" id="myform"  autocomplete="off">
+                <fieldset >
+                     <legend id="frame" align="center">学生登录</legend>
+                     <label>学号:</label>
+                     <input type="text" name="num"  autofocus="autofocus"/><br/>
+                    <label>姓名:</label>
+                    <input type="text" name="user" /><br/>
+                    <label>密码:</label>
+                    <input type="password" name="passwd"/><br/>
+                    <input type="submit" class="bu" value="登录" />
+                </fieldset>
+                
+            </form>
+            
+            </div>
+            
+        </div>
+       
+</article>
+</body>
+</html>

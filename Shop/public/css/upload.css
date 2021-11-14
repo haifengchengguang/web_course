@@ -1,0 +1,138 @@
+#top{
+    height:50px;
+    background-color:#DDDDDD;
+}
+.list{
+    left:200px;
+    margin: 0px;
+    padding:0px;
+}
+.list li {
+    position:relative;
+    margin-left:100px ;
+    height:50px;
+    width:115px;
+    list-style:none;
+    float:left;
+    display:inline;
+}
+.list li a{
+    text-align:center;
+
+    color: black ;
+    width:115px;
+    margin:0px;
+    padding:0px 0px 0px 0px;
+    text-decoration: none;
+    display:block;
+    line-height:50px;
+}
+.list li a:hover{
+    text-decoration: underline;
+    background-color: #a7dbd8;
+}
+.list#user a{
+    text-align:center;
+    color: black ;
+    width:150px;
+    margin:0px;
+    padding:0px 0px 0px 0px;
+    text-decoration: none;
+    display:block;
+    line-height:50px;
+}
+.option{
+    position:relative;
+    left: 0px;
+}
+#user ul{
+    visibility: hidden;
+}
+#user ul li a{
+    width:100px;
+    height:50px;
+    color: black ;
+    background-color:#DDDDDD;
+}
+#user:hover ul {
+    visibility: visible;
+    position:relative;
+    left:-130px;
+}
+.list#user a:hover{
+    text-decoration: underline;
+}
+
+#totalset{
+    height:750px;
+    width: 500px;
+    background-color: beige;
+    margin-left: 300px;
+}
+
+#modify{
+    height:600px;
+    width:600px;
+    margin-left: 50px;
+
+}
+
+#modifytitle {
+    font-size:50px;
+    position:center;
+}
+#set1 {
+    border-color:red;
+    border-radius: 50px 50px;
+}
+
+#totalset{
+    font-size: 40px;
+}
+#upgoodsname{
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    //border-style: dashed;
+    border-radius: 10px 10px;
+    border-color: #abef98;
+}
+#upgoodprice{
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 10px 10px;
+    border-color: #abef98;
+}
+#upgoodskind{
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    //border-style: dashed;
+    border-radius: 10px 10px;
+    border-color: #abef98;
+}
+
+#upgoodsphoto{
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 10px 10px;
+    border-color: #abef98;
+
+}
+#upgoodsphote:hover{
+    background-color: #4dc71f;
+}
+
+#upload{
+    width: 200px;
+    height: 40px;
+    font-size: 30px;
+    border-radius: 10px 10px;
+    margin-right: 175px;
+    background-color: antiquewhite;
+}
+#upload:hover{
+    background-color: #4dc71f;
+}
